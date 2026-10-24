@@ -7,7 +7,7 @@ flowchart TD
     D --> E[Sprint Review]
     E --> A
 ```
-
+## Line Chart
 ```mermaid
 xychart-beta
     title "Technological Capability (Illustrative)"
@@ -15,7 +15,7 @@ xychart-beta
     y-axis "Relative Capability" 0 --> 130
     line [1, 2, 4, 8, 16, 32, 64, 128]
 ```
-
+## Bar Chart
 ```mermaid
 xychart-beta
     title "Hours by Sprint"
@@ -23,7 +23,7 @@ xychart-beta
     y-axis "Hours" 0 --> 60
     bar [20, 35, 30, 45, 50, 40]
 ```
-
+## Pie Chart
 ```mermaid
 pie showData
     title Development Effort
@@ -32,7 +32,7 @@ pie showData
     "Design" : 20
     "Documentation" : 10
 ```
-
+## Flowchart
 ```mermaid
 flowchart TD
     A[Requirements] --> B[Design]
@@ -41,7 +41,7 @@ flowchart TD
     D -->|Yes| E[Deployment]
     D -->|No| C
 ```
-
+## Sequence Diagram
 ```mermaid
 sequenceDiagram
     participant B as Browser
@@ -52,6 +52,7 @@ sequenceDiagram
     DB-->>S: Results
     S-->>B: JSON response
 ```
+## Gantt Chart
 ```mermaid
 gantt
     title Two-Week Sprint
@@ -65,7 +66,7 @@ gantt
     section Delivery
     Sprint Demo :milestone, 2026-11-06, 0d
 ```
-
+## Class Diagram
 ```mermaid
 classDiagram
     class User {
@@ -86,7 +87,7 @@ classDiagram
     User "1" --> "*" Project : owns
     Project "1" --> "*" Task : contains
 ```
-
+## State Diagram
 ```mermaid
 stateDiagram-v2
     [*] --> Open
