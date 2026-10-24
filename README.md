@@ -97,3 +97,25 @@ stateDiagram-v2
     Review --> InProgress : Changes needed
     Done --> [*]
 ```
+## Git Sequence Diagram
+```mermaid
+gitGraph
+		commit
+		commit
+		branch develop
+		checkout develop
+		commit
+		commit
+		checkout main
+		merge develop
+		commit
+		branch feature
+		checkout feature
+		commit
+		commit
+		checkout develop
+		merge feature
+		checkout main
+		merge develop
+```
+
