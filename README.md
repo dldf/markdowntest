@@ -7,3 +7,92 @@ flowchart TD
     D --> E[Sprint Review]
     E --> A
 ```
+
+```mermaid
+xychart-beta
+    title "Technological Capability (Illustrative)"
+    x-axis [1, 2, 3, 4, 5, 6, 7, 8]
+    y-axis "Relative Capability" 0 --> 130
+    line [1, 2, 4, 8, 16, 32, 64, 128]
+```
+
+```mermaid
+xychart-beta
+    title "Hours by Sprint"
+    x-axis [1, 2, 3, 4, 5, 6]
+    y-axis "Hours" 0 --> 60
+    bar [20, 35, 30, 45, 50, 40]
+```
+
+```mermaid
+pie showData
+    title Development Effort
+    "Coding" : 45
+    "Testing" : 25
+    "Design" : 20
+    "Documentation" : 10
+```
+
+```mermaid
+flowchart TD
+    A[Requirements] --> B[Design]
+    B --> C[Implementation]
+    C --> D{Tests Pass?}
+    D -->|Yes| E[Deployment]
+    D -->|No| C
+```
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant S as Server
+    participant DB as Database
+    B->>S: GET /users
+    S->>DB: SELECT users
+    DB-->>S: Results
+    S-->>B: JSON response
+```
+```mermaid
+gantt
+    title Two-Week Sprint
+    dateFormat YYYY-MM-DD
+    section Planning
+    Sprint Planning :a1, 2026-10-26, 1d
+    section Development
+    Implementation :a2, after a1, 7d
+    section Testing
+    GUI Testing :a3, 2026-11-03, 3d
+    section Delivery
+    Sprint Demo :milestone, 2026-11-06, 0d
+```
+
+```mermaid
+classDiagram
+    class User {
+        +String name
+        +String email
+        +login()
+        +logout()
+    }
+    class Project {
+        +String title
+        +createTask()
+    }
+    class Task {
+        +String description
+        +Boolean completed
+        +markComplete()
+    }
+    User "1" --> "*" Project : owns
+    Project "1" --> "*" Task : contains
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Open
+    Open --> InProgress
+    InProgress --> Review
+    Review --> Done
+    Review --> InProgress : Changes needed
+    Done --> [*]
+```
